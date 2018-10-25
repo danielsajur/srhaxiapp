@@ -13,4 +13,4 @@ Para importar os fontes no site AppInventor:
 1 - Usando um compactador de arquivos, compactar a pasta do repositório Git;
  e alterar a extensão do arquivo compactado para ".aia";
 2 - Acessar a url http://ai2.appinventor.mit.edu com login e senha cadastrados;
-3 - Selecionar o item do menu "Projects -> Import project (.aia) from a repository ...", para importar o arquivo com a extensão ".aia" e ter acesso à edição gráfica do aplicativo.
+3 - Selecionar o item do menu "Projects -> Import project (.aia) from my computer ...", para importar o arquivo com a extensão ".aia" e ter acesso à edição gráfica do aplicativo.
