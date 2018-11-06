@@ -1,4 +1,0 @@
-#|
-$JSON
-{"authURL":["ai2.appinventor.mit.edu"],"YaVersion":"172","Source":"Form","Properties":{"$Name":"Splash","$Type":"Form","$Version":"23","AlignHorizontal":"3","AlignVertical":"2","AppName":"SrHaxi","BackgroundImage":"fundo_fumaca.jpg","CloseScreenAnimation":"fade","OpenScreenAnimation":"fade","ShowStatusBar":"False","Sizing":"Responsive","Title":"Splash","TitleVisible":"False","Uuid":"0","$Components":[{"$Name":"Image1","$Type":"Image","$Version":"3","Height":"-1040","Width":"-2","Picture":"SrHaxi-Logo.png","Uuid":"170896692"},{"$Name":"Label1","$Type":"Label","$Version":"4","FontBold":"True","FontSize":"32.0","HTMLFormat":"True","Width":"-2","Text":"Sr. HAXI","TextAlignment":"1","Uuid":"-270447258"},{"$Name":"Label2","$Type":"Label","$Version":"4","FontBold":"True","FontSize":"12.0","FontTypeface":"1","HTMLFormat":"True","Width":"-2","Text":"Smoke Shop","TextAlignment":"1","Uuid":"828273269"}]}}
-|#

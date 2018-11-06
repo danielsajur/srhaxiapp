@@ -1,0 +1,202 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="global_declaration" id="(GOpP)m}dOJO4x(h-EB9" x="-31" y="-105">
+    <field name="NAME">screenHome</field>
+    <value name="VALUE">
+      <block type="text" id="cLuF7$Ci|xd=sR/Gso8Q">
+        <field name="TEXT">screenHome</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="=Oit1#BCDT[;M-Rwii%_" x="-30" y="-69">
+    <field name="NAME">user</field>
+    <value name="VALUE">
+      <block type="text" id="F?`#)._sCrf0dnaO]SEF">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="PM3s{Z@EX7b(ujfhiwoJ" x="-30" y="-35">
+    <field name="NAME">passwd</field>
+    <value name="VALUE">
+      <block type="text" id="0`_jo69.-Nl3D?[[HZ~=">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="/I|fo#w1g2d-z$,@X{qF" x="-30" y="21">
+    <mutation component_type="Form" instance_name="Screen1" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="controls_if" id="l8}5s~wEfo#HJUn%!]^q">
+        <value name="IF0">
+          <block type="logic_operation" id=")`/ybbt$)O3YsQVVHfAb">
+            <field name="OP">AND</field>
+            <value name="A">
+              <block type="component_set_get" id="[ZKFP{e=r+Wdu,Y0}./G">
+                <mutation component_type="CheckBox" set_or_get="get" property_name="Checked" is_generic="false" instance_name="chkLembreme"></mutation>
+                <field name="COMPONENT_SELECTOR">chkLembreme</field>
+                <field name="PROP">Checked</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_negate" id="h2!6gIp=n?w^^e]{u^,l">
+                <value name="BOOL">
+                  <block type="logic_operation" id="~EgDn=sZp.5iH,WdbU)Y">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="text_isEmpty" id="$3T~W`tXIxwwpZ[|=Gio">
+                        <value name="VALUE">
+                          <block type="lexical_variable_get" id="zVAsCGsc*!5z9h-OwBfH">
+                            <field name="VAR">global user</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text_isEmpty" id="(j22/7i?[?)]S7_NEsLv">
+                        <value name="VALUE">
+                          <block type="lexical_variable_get" id="xNt}98x|wjz2[~o{?D8{">
+                            <field name="VAR">global passwd</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_openAnotherScreenWithStartValue" id="@w/Mq@#7yzW@IfI0qTVa">
+            <value name="SCREENNAME">
+              <block type="lexical_variable_get" id="i)S0xk9:[!Mo7*bU,Tj8">
+                <field name="VAR">global screenHome</field>
+              </block>
+            </value>
+            <value name="STARTVALUE">
+              <block type="text_changeCase" id="[G%Z)NRj`LiI9ef-`[=#">
+                <field name="OP">UPCASE</field>
+                <value name="TEXT">
+                  <block type="lexical_variable_get" id="~_1XaxoEMZlJ(=CVc1ca">
+                    <field name="VAR">global user</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="r[v1[`:vrbrJ#PyTt=7X" x="-36" y="192">
+    <mutation component_type="Button" instance_name="btnLogin" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnLogin</field>
+    <statement name="DO">
+      <block type="lexical_variable_set" id="48;;bRsG|$s^~6Q(XxA6">
+        <field name="VAR">global user</field>
+        <value name="VALUE">
+          <block type="component_set_get" id="R$wq=%17*[-zsxtQ1:x:">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txtUsuario"></mutation>
+            <field name="COMPONENT_SELECTOR">txtUsuario</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+        <next>
+          <block type="lexical_variable_set" id="knv8Ug7:i#le-P]tXo%U">
+            <field name="VAR">global passwd</field>
+            <value name="VALUE">
+              <block type="component_set_get" id="=h0KdHeTO8L?;9D4tlnW">
+                <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txtPasswd"></mutation>
+                <field name="COMPONENT_SELECTOR">txtPasswd</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="Q[,SGj4Et]Q.o4FA[PuV">
+                <value name="IF0">
+                  <block type="logic_negate" id=")dW,{3Tq1rDzBTo`1:|A">
+                    <value name="BOOL">
+                      <block type="logic_operation" id="xgQa=ztvM,?u:ZyR^K:h">
+                        <field name="OP">AND</field>
+                        <value name="A">
+                          <block type="text_isEmpty" id="/F:9z-+_L*];.}/bG//b">
+                            <value name="VALUE">
+                              <block type="lexical_variable_get" id="U1xSQ_:c.%0WRvo/5x]v">
+                                <field name="VAR">global user</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="text_isEmpty" id="Yo0-yi%^;n*)$%GO_0v)">
+                            <value name="VALUE">
+                              <block type="lexical_variable_get" id="Wa(r)6Pw6qHr^OkPF#24">
+                                <field name="VAR">global passwd</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="component_method" id="Rpl2fC?W(p-+;Det}m^8">
+                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="ntfLogin"></mutation>
+                    <field name="COMPONENT_SELECTOR">ntfLogin</field>
+                    <value name="ARG0">
+                      <block type="text_join" id="~2faqUhITr:z5e;yXx$l">
+                        <mutation items="3"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="B[/^Aoo5}d7!+D*DZQW}">
+                            <field name="TEXT">Seja bem-vindo, </field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="text_changeCase" id="W?aQy|e1|@uBw`oTHH:/">
+                            <field name="OP">UPCASE</field>
+                            <value name="TEXT">
+                              <block type="lexical_variable_get" id="+t:cfqvPz3FKVPpsm${{">
+                                <field name="VAR">global user</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="text" id="0pDE0zBd3Y)sM!Fau}l4">
+                            <field name="TEXT">!</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_openAnotherScreenWithStartValue" id="wZ=$Rlsws98[}[9fQWiM">
+                        <value name="SCREENNAME">
+                          <block type="lexical_variable_get" id=";@Rl)DE1c6P/_W#1J+m3">
+                            <field name="VAR">global screenHome</field>
+                          </block>
+                        </value>
+                        <value name="STARTVALUE">
+                          <block type="text_changeCase" id="=rUp|$%53?WM.Rd*ZiOk">
+                            <field name="OP">UPCASE</field>
+                            <value name="TEXT">
+                              <block type="lexical_variable_get" id="69i8gg{psiOV1RUR~f{g">
+                                <field name="VAR">global user</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="172" language-version="22"></yacodeblocks>
+</xml>
