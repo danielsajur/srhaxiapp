@@ -1,0 +1,299 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="-r6LX`2+d.Ovi:2uylxV" x="-977" y="-494">
+    <mutation component_type="Form" instance_name="CadastroUsuarios" event_name="BackPressed"></mutation>
+    <field name="COMPONENT_SELECTOR">CadastroUsuarios</field>
+    <statement name="DO">
+      <block type="component_method" id=".Ray2eL.(F2DZ1{e^yl%">
+        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="4U!XUCeDiaWG8q#FIiVO">
+            <field name="TEXT">Você deseja sair? </field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="L-%~SHS{AYk$n=ZL?X8Z">
+            <field name="TEXT">Atenção</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="c`M()rg)JQwzLCXa4M7~">
+            <field name="TEXT">Sim</field>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block type="text" id="3*T#6ojTo7]`e(oYVbh0">
+            <field name="TEXT">Não</field>
+          </block>
+        </value>
+        <value name="ARG4">
+          <block type="logic_boolean" id="0-_#jI(xsb5=.033B3GT">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="LvsRJ^@{U}Gr80D5v?JO" x="-980" y="-280">
+    <mutation component_type="Notifier" instance_name="Notifier1" event_name="AfterChoosing"></mutation>
+    <field name="COMPONENT_SELECTOR">Notifier1</field>
+    <statement name="DO">
+      <block type="controls_if" id="b1[rv*U*4UE%Q@6mvoxc">
+        <value name="IF0">
+          <block type="math_compare" id="eg5`Qx{mP~^f{EfGzFH_">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="}%8PJ5-[^P9,$UMzS;L$">
+                <mutation>
+                  <eventparam name="choice"></eventparam>
+                </mutation>
+                <field name="VAR">choice</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="%D;)3+r|Rmf[z~3hp4b:">
+                <field name="TEXT">Sim</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_closeApplication" id="^{8!2B]@hRm-1u36rmOV"></block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="D=KhzeR4`#AmIFImRJYi" x="-982" y="-118">
+    <mutation component_type="Button" instance_name="btnSalvar" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnSalvar</field>
+    <statement name="DO">
+      <block type="controls_if" id="(ja:g6B#a:FT@2by2-Ds">
+        <mutation elseif="3" else="1"></mutation>
+        <value name="IF0">
+          <block type="math_compare" id="$B.GmklHx*TDLNBoY/2W">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="*F:yplkViOeAdc@(!*v-">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txdLogin"></mutation>
+                <field name="COMPONENT_SELECTOR">txdLogin</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="/BpwC4!|%+fRW}+:CV)-">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="Vq2H8GZ$J.QFQxFTC2c[">
+            <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="pt{e55n}?(.Ey_Ut};RY">
+                <field name="TEXT">Campo Login deve ter um valor!</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="T8qY*L*jo#,@/1K}?g9|">
+                <field name="TEXT">Atenção!</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block type="text" id="_w@y[4rFg^{jEG(Dh9SJ">
+                <field name="TEXT">OK</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="math_compare" id="eRZd5+)*i*:.N:qTbPGT">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="_g]nXJ%5bj+w:IkYYo$`">
+                <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txdSenha"></mutation>
+                <field name="COMPONENT_SELECTOR">txdSenha</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="TF}%x++eDY1dT{vcyi3-">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="component_method" id="o,L~4_KYjGrCG5U^NYd+">
+            <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="%#R]3teN2`%T$v4iPTgN">
+                <field name="TEXT">Campo Senha deve ter um valor!</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="W@~6ZZF#!viQ^Mj)+?WM">
+                <field name="TEXT">Atenção!</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block type="text" id="hTgL#7|hqK}CO.8CQM6]">
+                <field name="TEXT">OK</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="IF2">
+          <block type="math_compare" id="!qzE6!,SZ,%sRPi/(Z^t">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="|_NN)Uu)g8f[q#y@ux#b">
+                <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txdConfirmarSenha"></mutation>
+                <field name="COMPONENT_SELECTOR">txdConfirmarSenha</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="w,25tkqNA|g=|:!gR~{7">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="component_method" id="EPoF_S9Y[ks-xfaC[dwa">
+            <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="E6t!PG}No,1%-Ki-iGVx">
+                <field name="TEXT">Campo Confirmar Senha deve ter um valor!</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="l}TC}OqX({%C*1fKHa:4">
+                <field name="TEXT">Atenção!</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block type="text" id="u^z6AtTl+lVQ50Bfme^i">
+                <field name="TEXT">OK</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="IF3">
+          <block type="math_compare" id="@hq4P;0gG;}RA,YM#P?=">
+            <field name="OP">NEQ</field>
+            <value name="A">
+              <block type="component_set_get" id="F.S2}g%/{aU$~L^m2CN{">
+                <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txdSenha"></mutation>
+                <field name="COMPONENT_SELECTOR">txdSenha</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="component_set_get" id="{*{Kg2Z9fZtwTC.Ry(pZ">
+                <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txdConfirmarSenha"></mutation>
+                <field name="COMPONENT_SELECTOR">txdConfirmarSenha</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO3">
+          <block type="component_method" id="/s3F:gEZ4CsP(l|e?{Um">
+            <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="(`c~fAhPx9C?;(Za8$-m">
+                <field name="TEXT">As senhas estão diferentes</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="BM$$Ngprcmiw3mDl1RRs">
+                <field name="TEXT">Atenção!</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block type="text" id="FDWjE|]s@c^6x^ZPro/]">
+                <field name="TEXT">OK</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="lists_add_items" id="wDYpR!;Ux|vE30+SCK^7">
+            <mutation items="3"></mutation>
+            <value name="LIST">
+              <block type="lexical_variable_get" id="kZ$BXP(9#kv]mA@)|$~%">
+                <field name="VAR">global Usuarios</field>
+              </block>
+            </value>
+            <value name="ITEM0">
+              <block type="component_set_get" id="}Bzm9O^YLXRHFDY:XfKD">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txdLogin"></mutation>
+                <field name="COMPONENT_SELECTOR">txdLogin</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="ITEM1">
+              <block type="component_set_get" id="jR1M_L4yW%)y1smx$)B~">
+                <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txdSenha"></mutation>
+                <field name="COMPONENT_SELECTOR">txdSenha</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="ITEM2">
+              <block type="component_set_get" id="KRspI4E|S?Wlk8v@|JE@">
+                <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txdConfirmarSenha"></mutation>
+                <field name="COMPONENT_SELECTOR">txdConfirmarSenha</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="p6r5$3@|qSdM=YBPa;T1">
+                <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="BancoDeDados"></mutation>
+                <field name="COMPONENT_SELECTOR">BancoDeDados</field>
+                <value name="ARG0">
+                  <block type="text" id="zl?egn^(;M{UKp5`@^15">
+                    <field name="TEXT">TB_Usuarios</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="lexical_variable_get" id=";-t*c]A@do/yx0B4T]%J">
+                    <field name="VAR">global Usuarios</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="|1HGD9oV#gX#h_I[*AMW">
+                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Notifier1</field>
+                    <value name="ARG0">
+                      <block type="text" id="bU1T~BZmr/,q+Ea4th6(">
+                        <field name="TEXT">Usuário cadastrado</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_closeScreen" id="4#|fRX}s%;y;9V[+*oqD"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="/AK|/w(5h|z~iPb(z6pC" x="-312" y="356">
+    <field name="NAME">Usuarios</field>
+    <value name="VALUE">
+      <block type="lists_create_with" id="#!34+(qQ+03J{-`kbixj">
+        <mutation items="0"></mutation>
+      </block>
+    </value>
+  </block>
+  <yacodeblocks ya-version="172" language-version="22"></yacodeblocks>
+</xml>

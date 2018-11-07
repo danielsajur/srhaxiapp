@@ -1,0 +1,226 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="+@D;;$y!irUL=C@,vqLR" x="-943" y="-507">
+    <mutation component_type="Form" instance_name="CadastroDeClientes" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">CadastroDeClientes</field>
+    <statement name="DO">
+      <block type="component_method" id="GGR2Mw-3lFA:y.b{aX$I">
+        <mutation component_type="TextBox" method_name="RequestFocus" is_generic="false" instance_name="txbNome"></mutation>
+        <field name="COMPONENT_SELECTOR">txbNome</field>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="H}LkxcZ^d2E49D)YFl3{" x="-928" y="-393">
+    <mutation component_type="TextBox" instance_name="txbCPF" event_name="LostFocus"></mutation>
+    <field name="COMPONENT_SELECTOR">txbCPF</field>
+    <statement name="DO">
+      <block type="controls_if" id=":}Zo9BrRb.|_:r`(qNjm">
+        <mutation elseif="1"></mutation>
+        <value name="IF0">
+          <block type="logic_operation" id="zF!nL?ZyX[q[XJSD#n7%">
+            <field name="OP">AND</field>
+            <value name="A">
+              <block type="math_compare" id="9FKaN~L@+Q.J.5d%%qIx">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="text_trim" id="(ZI4!tQQ:UgIjrWbK;_L">
+                    <value name="TEXT">
+                      <block type="text_length" id="EB*I,+dpt9[*yFTJSov~">
+                        <value name="VALUE">
+                          <block type="component_set_get" id="oh[:+O].`kPKL7QkF$o*">
+                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txbCPF"></mutation>
+                            <field name="COMPONENT_SELECTOR">txbCPF</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="t|/,l19(PTa$b2w%^*T1">
+                    <field name="NUM">11</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_compare" id="+jf|U@T^vky48:EY+%Ht">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="component_set_get" id="^IGi$E,k,fT*9a4z|+07">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txbCPF"></mutation>
+                    <field name="COMPONENT_SELECTOR">txbCPF</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="U5QxPURpaig-=9eC;Z!g">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="6}Vcoq0xc/gMAVMySWI!">
+            <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="i-$_MVHTE2~;,4S*[F`3">
+                <field name="TEXT">CPF incorreto</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="pTK,Uolv={^I:J%u9,}Z">
+                <field name="TEXT">Atenção!</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block type="text" id="Ci8R(F,H,J,~+^qr{oH}">
+                <field name="TEXT">OK</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="math_compare" id="k.TpmGy=mYJhQYg[cm|s">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="text_trim" id="amS,0/m+B*o9om?Hnz?n">
+                <value name="TEXT">
+                  <block type="text_length" id="9g?2[%GQl3daD0~,FY}v">
+                    <value name="VALUE">
+                      <block type="component_set_get" id="W|P-qT+gFQaJY7KB_EV1">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txbCPF"></mutation>
+                        <field name="COMPONENT_SELECTOR">txbCPF</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="zqV(sG$IT6@h*a5@.rhs">
+                <field name="NUM">11</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="component_set_get" id="!%OHb^4DEYZt2kO@Bv$A">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="txbCPF"></mutation>
+            <field name="COMPONENT_SELECTOR">txbCPF</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text_join" id="a:8PA+)XE@1E#)_C:ze:">
+                <mutation items="7"></mutation>
+                <value name="ADD0">
+                  <block type="text_segment" id="KWRCkH8qTp@hj#w}y7M@">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="!la50ge9o5~t0gQ./p|1">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txbCPF"></mutation>
+                        <field name="COMPONENT_SELECTOR">txbCPF</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="START">
+                      <block type="math_number" id="BJQ0/@NR/GiRyqV{7[*m">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <value name="LENGTH">
+                      <block type="math_number" id="uP+[,Z2m4i`O0O;$Y_IX">
+                        <field name="NUM">3</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="text" id="b}5HVkf%n1U4|KU4~*sS">
+                    <field name="TEXT">.</field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="text_segment" id="L3K1F;mN-_oF%KB12:l/">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="l8:Y+pQs;%hB=ZJnQ`y:">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txbCPF"></mutation>
+                        <field name="COMPONENT_SELECTOR">txbCPF</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="START">
+                      <block type="math_number" id="?kD@wXx2^OETYuyN(|VV">
+                        <field name="NUM">4</field>
+                      </block>
+                    </value>
+                    <value name="LENGTH">
+                      <block type="math_number" id="]RY=hXN~wo@BMxPO+v4o">
+                        <field name="NUM">3</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ADD3">
+                  <block type="text" id="[qtRHz?_V3eDt`$$BR?w">
+                    <field name="TEXT">.</field>
+                  </block>
+                </value>
+                <value name="ADD4">
+                  <block type="text_segment" id="%hj%hS0B2;v=kLWuFy6{">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="ZmJ^0gH!c]bMa;Fdui^I">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txbCPF"></mutation>
+                        <field name="COMPONENT_SELECTOR">txbCPF</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="START">
+                      <block type="math_number" id="b7vTHajEEs[Yfxz3S3w_">
+                        <field name="NUM">7</field>
+                      </block>
+                    </value>
+                    <value name="LENGTH">
+                      <block type="math_number" id="k=fY0Iqji;}`!.pk3J_g">
+                        <field name="NUM">3</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ADD5">
+                  <block type="text" id="o#Nk7},6YW.cF!7U30h}">
+                    <field name="TEXT">.</field>
+                  </block>
+                </value>
+                <value name="ADD6">
+                  <block type="text_segment" id="oxUY[w]q=uJVC.({8wV!">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="Ye*zOP~YGcl2U}k=mxF~">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txbCPF"></mutation>
+                        <field name="COMPONENT_SELECTOR">txbCPF</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="START">
+                      <block type="math_number" id="u([==H9b%AN7z7ClnF.]">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <value name="LENGTH">
+                      <block type="math_number" id="^W/ef16!JLWJ|I|ok,@v">
+                        <field name="NUM">2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="172" language-version="22"></yacodeblocks>
+</xml>

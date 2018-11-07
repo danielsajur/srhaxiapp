@@ -1,0 +1,4 @@
+#|
+$JSON
+{"authURL":["ai2.appinventor.mit.edu"],"YaVersion":"172","Source":"Form","Properties":{"$Name":"Splash","$Type":"Form","$Version":"23","AlignHorizontal":"3","AlignVertical":"2","AppName":"SrHaxi3","BackgroundColor":"&HFF000000","Sizing":"Responsive","Title":"Splash","TitleVisible":"False","Uuid":"0","$Components":[{"$Name":"Image1","$Type":"Image","$Version":"3","Picture":"Splash2-Fundopreto.png","Uuid":"1425678062"},{"$Name":"Clock1","$Type":"Clock","$Version":"3","TimerInterval":"2000","Uuid":"-820585680"},{"$Name":"BancoDeDados","$Type":"TinyDB","$Version":"2","Uuid":"-1378834752"}]}}
+|#

@@ -1,0 +1,59 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="1(hX[=}axt;0Z??6z,@+" x="-1656" y="-837">
+    <mutation component_type="Clock" instance_name="Clock1" event_name="Timer"></mutation>
+    <field name="COMPONENT_SELECTOR">Clock1</field>
+    <statement name="DO">
+      <block type="controls_if" id="@4Z7nm%_;{N,j+PN-HiR">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="math_compare" id="6E(ByOd/?~BP*B0Q;S$|">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_method" id="MRP)0-l$XTC$gEr4$.W$">
+                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="BancoDeDados"></mutation>
+                <field name="COMPONENT_SELECTOR">BancoDeDados</field>
+                <value name="ARG0">
+                  <block type="text" id="$9?V9)m:,-w.uFW5wD6=">
+                    <field name="TEXT">TB_Usuarios</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="Y#%C}i!xYuXlub/hJVPl">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="D+o(W0XDT^9rEqvNi_Y[">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_openAnotherScreen" id="_LnKvDHqrjpkt)L4x{d3">
+            <value name="SCREEN">
+              <block type="text" id="2%pDl[P+eo3Y^erds{w%">
+                <field name="TEXT">CadastroUsuarios</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="controls_openAnotherScreen" id="=`BOPi/Z;FNZdGxyZ7RU">
+            <value name="SCREEN">
+              <block type="text" id="Kv?#,qQY,+hj:vR@?=9!">
+                <field name="TEXT">Login</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_closeScreen" id="W3k7e+;[t2x,?U^[sTQD"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="172" language-version="22"></yacodeblocks>
+</xml>

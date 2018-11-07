@@ -1,0 +1,93 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="^r2Z$veeaW$*W``|wdP*" x="-1773" y="-933">
+    <mutation component_type="Form" instance_name="Screen1" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="_dO(_/4be6P1Y9.3;:fG">
+        <value name="SCREEN">
+          <block type="text" id="]dH{c)FrzPZ98CZk1b!]">
+            <field name="TEXT">Splash</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="-r6LX`2+d.Ovi:2uylxV" x="-1776" y="-842">
+    <mutation component_type="Form" instance_name="Screen1" event_name="BackPressed"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="component_method" id=".Ray2eL.(F2DZ1{e^yl%">
+        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="4U!XUCeDiaWG8q#FIiVO">
+            <field name="TEXT">Você deseja sair? </field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="L-%~SHS{AYk$n=ZL?X8Z">
+            <field name="TEXT">Atenção</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="c`M()rg)JQwzLCXa4M7~">
+            <field name="TEXT">Sim</field>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block type="text" id="3*T#6ojTo7]`e(oYVbh0">
+            <field name="TEXT">Não</field>
+          </block>
+        </value>
+        <value name="ARG4">
+          <block type="logic_boolean" id="0-_#jI(xsb5=.033B3GT">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="7f21JNU)$TJRJcMXX`6b" x="-983" y="-820">
+    <mutation component_type="Button" instance_name="btn_Conta" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btn_Conta</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="Q~u^TIyk*nxk+C@;F8.J">
+        <value name="SCREEN">
+          <block type="text" id="n$6-9l,s:qk{/:wsf9]7">
+            <field name="TEXT">CadastroDeClientes</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="LvsRJ^@{U}Gr80D5v?JO" x="-1776" y="-629">
+    <mutation component_type="Notifier" instance_name="Notifier1" event_name="AfterChoosing"></mutation>
+    <field name="COMPONENT_SELECTOR">Notifier1</field>
+    <statement name="DO">
+      <block type="controls_if" id="b1[rv*U*4UE%Q@6mvoxc">
+        <value name="IF0">
+          <block type="math_compare" id="eg5`Qx{mP~^f{EfGzFH_">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="}%8PJ5-[^P9,$UMzS;L$">
+                <mutation>
+                  <eventparam name="choice"></eventparam>
+                </mutation>
+                <field name="VAR">choice</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="%D;)3+r|Rmf[z~3hp4b:">
+                <field name="TEXT">Sim</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_closeApplication" id="^{8!2B]@hRm-1u36rmOV"></block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="172" language-version="22"></yacodeblocks>
+</xml>
